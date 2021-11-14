@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ponger:
+    container_name: ponger
+    build: ./ponger
+    ports:
+      - 9000:8080
+
+  pinger:
+    container_name: pinger
+    build: ./pinger
+    depends_on:
+      - ponger
