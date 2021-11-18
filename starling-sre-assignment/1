@@ -1,0 +1,6 @@
+ponger:
+  url: http://172.17.0.2.com:8080
+  # If uncommented, acceptCert will add
+  # the certificates listed in the file to
+  # the list of accepted certificates
+  # acceptCert: server.crt

@@ -4,10 +4,18 @@ services:
     container_name: ponger
     build: ./ponger
     ports:
-      - 9000:8080
+      - 8080:8080
+    networks:
+      - service
 
   pinger:
     container_name: pinger
     build: ./pinger
     depends_on:
       - ponger
+    networks:
+      - service
+
+networks:
+  service:
+    driver: bridge

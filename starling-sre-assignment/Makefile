@@ -14,7 +14,7 @@ build: $(BINARIES)
 $(BINARIES):
 	export PROJECT=$(firstword $(subst /, ,$(@))) && \
 		docker run --rm -t -v "$(shell pwd)/$${PROJECT}":/src -w /src \
-		golang:1.11 sh -c "\
+		golang:1.13.1 sh -c "\
 			CGO_ENABLED=0 \
 			GOOS=$(GOOS) \
 			GOARCH=$(GOOARCH) \
